@@ -54,3 +54,22 @@
         }
     }
 }
+
+#service-fee{
+    overflow: hidden;
+    .service-fee__wrapper{
+        .service-fee_image{
+            position: absolute;
+            bottom:0px;
+            max-width: 240px;
+            left:0px;
+            filter: grayscale(0.5);
+            z-index: -1;
+
+            &.right{
+                left: auto;
+                right: 0px;;
+            }
+        }
+    }
+}

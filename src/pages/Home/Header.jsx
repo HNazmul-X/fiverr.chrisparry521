@@ -1,5 +1,5 @@
 import React from 'react';
-import gridImages from "../images/512.webp"
+import gridImages from "../../images/512.webp"
 
 const Header = () => {
     return (
