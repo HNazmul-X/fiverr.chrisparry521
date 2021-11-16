@@ -92,6 +92,11 @@
   right: 0px;
 }
 
+#all-collection {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e7eaec));
+  background: linear-gradient(white, #e7eaec);
+}
+
 /* COMMENT : Navbar Code here */
 #navbar {
   background: rgba(255, 255, 255, 0.274);
@@ -175,6 +180,10 @@
 
 #navbar .navbar-item-container .navbar-items li {
   list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #navbar .navbar-item-container .navbar-items li a {
@@ -184,6 +193,64 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
+}
+
+#footer {
+  background: var(--light-color);
+}
+
+.focus-dropdown {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.focus-dropdown.active .focus-dropdown__items {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.focus-dropdown .focus-dropdown__items {
+  position: absolute;
+  right: 0px;
+  width: 170px;
+  padding-top: 15px;
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.focus-dropdown .focus-dropdown__items .focus-dropdown__items-wrapper {
+  padding: 10px 0;
+  background: white;
+  -webkit-box-shadow: 5px 5px 20px #dadada;
+          box-shadow: 5px 5px 20px #dadada;
+  border-radius: 5px;
+  border: 1px solid #d4d4d4;
+}
+
+.focus-dropdown .focus-dropdown__items .focus-dropdown__items-wrapper .focus-dropdown__item {
+  padding: 7px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.focus-dropdown .focus-dropdown__items .focus-dropdown__items-wrapper .focus-dropdown__item:hover {
+  background: #dddddd;
+}
+
+.focus-dropdown .focus-dropdown__items .focus-dropdown__items-wrapper .focus-dropdown__item img {
+  width: 20px;
+  margin-right: 10px;
 }
 
 * {
