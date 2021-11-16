@@ -1,1 +1,199 @@
-/* No CSS *//*# sourceMappingURL=globals.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+#header {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#header .header-text {
+  max-width: 32rem;
+  padding: 13rem 0px;
+  color: var(--dark-color);
+}
+
+#header .header-text h1 {
+  font-size: 55px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+#header .header-text p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--dark-light-color);
+}
+
+#images-grid {
+  position: absolute;
+  top: -2rem;
+  left: 46rem;
+}
+
+#images-grid .images-grid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  width: 588px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+#images-grid .images-grid-container > .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap column;
+          flex-flow: wrap column;
+  row-gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#images-grid .grid-images-card {
+  width: 176px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#images-grid .grid-images-card img {
+  width: 100%;
+  height: 256px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* COMMENT : Navbar Code here */
+#navbar {
+  background: rgba(255, 255, 255, 0.274);
+  -webkit-box-shadow: 0px 24px 34px rgba(0, 0, 0, 0.05), 0px 2px 19px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 24px 34px rgba(0, 0, 0, 0.05), 0px 2px 19px rgba(0, 0, 0, 0.13);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  padding: 10px;
+  color: var(--dark-color);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+}
+
+#navbar .navbar-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#navbar .navbar-item-container .navbar-searchBar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#navbar .navbar-item-container .navbar-searchBar .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 32rem;
+  width: 100%;
+  background: var(--light-color);
+  padding: 2px;
+}
+
+#navbar .navbar-item-container .navbar-searchBar .search-bar .search-bar__icon {
+  padding: 5px 10px;
+}
+
+#navbar .navbar-item-container .navbar-searchBar .search-bar input {
+  border: none;
+  padding: 5px;
+  width: 100%;
+  font-size: 15px;
+}
+
+#navbar .navbar-item-container .navbar-searchBar .search-bar input:focus {
+  outline: none;
+}
+
+#navbar .navbar-item-container .navbar-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#navbar .navbar-item-container .navbar-items li {
+  list-style: none;
+}
+
+#navbar .navbar-item-container .navbar-items li a {
+  display: inline-block;
+  padding: 2px 3px;
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --light-color: white;
+  --dark-color: #111827;
+  --dark-light-color: rgba(107, 114, 128, 1);
+  --black: black;
+}
+
+@media screen and (min-width: 1080px) {
+  .container-xxl {
+    padding: 0px 4rem;
+  }
+}
+
+.theme-btn {
+  background: var(--dark-color);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+}
+
+.theme-btn:hover {
+  background: #576177 !important;
+}
+/*# sourceMappingURL=globals.css.map */

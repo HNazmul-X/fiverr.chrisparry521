@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import Header from "./Header";
+import NewCollection from "./NewCollection";
 
 const HomePage = () => {
     return (
-        <div>
-            <h1>Hello world</h1>
-        </div>
+        <>
+            <Header />
+            <NewCollection/>
+        </>
     );
 };
 

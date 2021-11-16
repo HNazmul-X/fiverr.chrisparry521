@@ -1,1 +1,30 @@
-@import "home"
+@import "home";
+@import "components";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --light-color: white;
+    --dark-color: #111827;
+    --dark-light-color: rgba(107, 114, 128, 1);
+    --black: black;
+}
+
+.container-xxl {
+    @media screen and (min-width: 1080px) {
+        padding: 0px 4rem;
+    }
+}
+
+.theme-btn {
+    background: var(--dark-color);
+    color: white;
+    padding: 10px 25px;
+    border: none;
+
+    &:hover {
+        background: rgb(87, 97, 119) !important;
+    }
+}
