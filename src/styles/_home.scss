@@ -21,6 +21,32 @@
             color:var(--dark-light-color);
         }
     }
+
+    @media screen and (max-width:1000px) {
+        #images-grid{
+            bottom: -56%;
+            top: auto;
+            left:50%;
+            right: auto;
+            z-index: -1;
+            transform: translateX(-50%);
+            opacity: 0.9;
+        }
+        .header-text{
+            max-width: 32rem;
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            padding-top: 5rem;
+            margin-bottom: 10rem;
+            h1{
+                font-size: 45px;
+            }
+            p{
+                font-size: 18px;
+            }
+        }
+    }
 }
 
 #images-grid{
@@ -28,7 +54,7 @@
     $card-height:256px;
     position: absolute;
     top:-2rem;
-    left:46rem;
+    left:55%;
     .images-grid-container{
         display: flex;
         width: 100%;
@@ -69,6 +95,21 @@
             &.right{
                 left: auto;
                 right: 0px;;
+            }
+        }
+    }
+
+    @media screen and (max-width:776px) {
+        .MuiTypography-h2{
+            font-size: 40px;
+        }
+        .MuiTypography-body1{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .service-fee__wrapper{
+            .service-fee_image{
+                opacity: 0.3;
             }
         }
     }

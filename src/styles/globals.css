@@ -25,10 +25,37 @@
   color: var(--dark-light-color);
 }
 
+@media screen and (max-width: 1000px) {
+  #header #images-grid {
+    bottom: -56%;
+    top: auto;
+    left: 50%;
+    right: auto;
+    z-index: -1;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0.9;
+  }
+  #header .header-text {
+    max-width: 32rem;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    padding-top: 5rem;
+    margin-bottom: 10rem;
+  }
+  #header .header-text h1 {
+    font-size: 45px;
+  }
+  #header .header-text p {
+    font-size: 18px;
+  }
+}
+
 #images-grid {
   position: absolute;
   top: -2rem;
-  left: 46rem;
+  left: 55%;
 }
 
 #images-grid .images-grid-container {
@@ -90,6 +117,19 @@
 #service-fee .service-fee__wrapper .service-fee_image.right {
   left: auto;
   right: 0px;
+}
+
+@media screen and (max-width: 776px) {
+  #service-fee .MuiTypography-h2 {
+    font-size: 40px;
+  }
+  #service-fee .MuiTypography-body1 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  #service-fee .service-fee__wrapper .service-fee_image {
+    opacity: 0.3;
+  }
 }
 
 #all-collection {
@@ -193,6 +233,38 @@
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 776px) {
+  #navbar .navbar-item-container .navbar-searchBar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.301);
+    top: 0px;
+    left: 0px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 100%;
+  }
+  #navbar .navbar-item-container .navbar-searchBar.active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-radius: 0;
+  }
+  #navbar .navbar-item-container .navbar-searchBar .search-bar {
+    margin-top: 5rem;
+    width: 90%;
+    max-width: 32rem;
+  }
 }
 
 #footer {
