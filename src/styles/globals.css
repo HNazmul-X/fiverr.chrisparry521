@@ -280,6 +280,10 @@ body.dark #navbar {
   background: rgba(0, 0, 0, 0.541);
 }
 
+body.dark #navbar .navbar-item-container .navbar-searchBar .search-bar input {
+  color: var(--dark-color);
+}
+
 #footer {
   background: var(--light-color);
 }

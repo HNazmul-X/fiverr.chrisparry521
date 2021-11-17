@@ -18,14 +18,13 @@ const Navbar = () => {
 
     const switchingTheme = () => {
         if(isDarkMode){
-            document.body.classList.add("dark")
-            setIsDarkMode(!isDarkMode)
-        } else if(!isDarkMode){
             document.body.classList.remove("dark")
-            setIsDarkMode(!isDarkMode);
-
+        } else if(!isDarkMode){
+            document.body.classList.add("dark")
         }
+        setIsDarkMode(!isDarkMode)
     }
+
 
     return (
         <nav id="navbar">
@@ -51,7 +50,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li onClick={switchingTheme}>
-                            <Link to="/">{isDarkMode ? <InlineIcon icon="bytesize:moon" style={{ fontSize: "25px" }} /> : <InlineIcon style={{ fontSize: "25px" }} icon="cil:sun" />}</Link>
+                            <Link to="/">{!isDarkMode ? <InlineIcon icon="bytesize:moon" style={{ fontSize: "25px" }} /> : <InlineIcon style={{ fontSize: "25px" }} icon="cil:sun" />}</Link>
                         </li>
                         <li className="d-none d-md-block">
                             <Link to="/">FAQ</Link>

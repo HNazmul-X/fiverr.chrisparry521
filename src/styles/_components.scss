@@ -94,6 +94,15 @@
 body.dark{
     #navbar{
         background:rgba(0, 0, 0, 0.541);
+        .navbar-item-container{
+            .navbar-searchBar{
+                .search-bar{
+                    input{
+                        color:var(--dark-color)
+                    }
+                }
+            }
+        }
     }
 }
 #footer {
