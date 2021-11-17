@@ -12,7 +12,7 @@ const ServiceFee = () => {
                 <div className="container-xxl">
                     <Box className="service-fee__text" py={7}>
                         <Typography variant="h2" fontWeight="bold">
-                            Lower the Service Fee
+                            Lower the Servic 
                         </Typography>
                         <Typography fontSize={20} maxWidth={800} mt={3}>
                             Earn more on sales at alpha.art by owning Piggy Sol Gang NFT. Each piggy will reduce the service fee by 25%.

@@ -5,11 +5,26 @@
     font-family: "Inter", sans-serif !important;
     box-sizing: border-box;
 }
-:root {
+:root{
     --light-color: white;
     --dark-color: #111827;
     --dark-light-color: rgba(107, 114, 128, 1);
+    --light-overlay:rgb(211, 211, 211);
     --black: black;
+}
+body.dark{
+    background: #15191f;
+    --light-color:#15191f;
+    --black:rgb(198, 207, 216);
+    --dark-color:rgb(207, 210, 224);
+    --dark-light-color:rgb(133, 133, 133);
+    --light-overlay:rgb(78, 83, 88);
+}
+.MuiTypography-root{
+    color:var(--dark-color)!important;
+}
+.text-dark{
+    color:var(--dark-color) !important;
 }
 
 .container-xxl {
@@ -20,7 +35,7 @@
 
 .theme-btn {
     background: var(--dark-color);
-    color: white;
+    color: var(--light-color);
     padding: 10px 25px;
     border: none;
 

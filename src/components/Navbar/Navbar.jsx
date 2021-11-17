@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     const [isDropdownShow, setIsDropdownShow] = useState(false);
     const [isMblSearchbarShow, setIsMblSearchbarShow] = useState(false);
+    const [isDarkMode , setIsDarkMode] = useState(false)
 
     useEffect(() => {
         if (isDropdownShow) {
@@ -14,6 +15,17 @@ const Navbar = () => {
             });
         }
     });
+
+    const switchingTheme = () => {
+        if(isDarkMode){
+            document.body.classList.add("dark")
+            setIsDarkMode(!isDarkMode)
+        } else if(!isDarkMode){
+            document.body.classList.remove("dark")
+            setIsDarkMode(!isDarkMode);
+
+        }
+    }
 
     return (
         <nav id="navbar">
@@ -38,10 +50,8 @@ const Navbar = () => {
                                 <InlineIcon icon="carbon:search" style={{ fontSize: "25px" }} />
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/">
-                                <InlineIcon style={{ fontSize: "25px" }} icon="clarity:sun-line" />
-                            </Link>
+                        <li onClick={switchingTheme}>
+                            <Link to="/">{isDarkMode ? <InlineIcon icon="bytesize:moon" style={{ fontSize: "25px" }} /> : <InlineIcon style={{ fontSize: "25px" }} icon="cil:sun" />}</Link>
                         </li>
                         <li className="d-none d-md-block">
                             <Link to="/">FAQ</Link>

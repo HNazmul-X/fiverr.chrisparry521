@@ -113,7 +113,20 @@
         }
     }
 }
+body.dark{
+    #service-fee{
+        .service-fee__wrapper{
+            background:rgb(40, 44, 51);
+        }
+    }
+}
 
 #all-collection{
     background:linear-gradient(white,rgb(231, 234, 236));
+}
+
+body.dark{
+    #all-collection{
+        background:linear-gradient(var(--light-color),rgb(37, 38, 44));
+    }
 }
