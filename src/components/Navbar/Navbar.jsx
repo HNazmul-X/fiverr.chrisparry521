@@ -19,12 +19,14 @@ const Navbar = () => {
 
     const switchingTheme = () => {
         const theme = localStorage.getItem("theme")
+
+        console.log(theme)
         
-        if(theme==="dark"){
-            localStorage.setItem("theme","light")
+        if(theme==="light" || theme===null){
+            localStorage.setItem("theme","dark")
             setIsDarkMode(true)
         }else{
-            localStorage.setItem("theme","dark")
+            localStorage.setItem("theme","light")
             setIsDarkMode(false)
         }
 
