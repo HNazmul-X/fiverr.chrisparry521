@@ -1,0 +1,241 @@
+section.code-video-page{
+
+    .top-part{
+        margin-top: 80px;
+        .left-side{
+            width: 48%;
+            @media screen and (max-width: 720px){
+                width: 100%;
+            }
+            .main-image{
+                border-radius: 10px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .right-side{
+            width: 48%;
+            @media screen and (max-width: 720px){
+                width: 100%;
+            }
+            .about{
+                width: 80%;
+                span{
+                    font-size: 15px;
+                    color: var(--textColor1);
+                    font-weight: 400;
+                }
+                .person-name{
+                    color:var(--textColor1);
+                    h2{
+                        font-weight: bold;
+                    }
+                }
+            }
+            .offer{
+                width: 80%;
+                .make-offer-btn{
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid var(--longBorder);
+                    button{
+                        padding: 12px 65px;
+                        background: var(--offerBtnBg);
+                        color: var(--tableActiveBtn);
+                        border: none;
+                        border-radius: 7px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-top: 28px;
+                    }
+                }
+            }
+            .about-boxes{
+                color: var(--theBlackColor);
+                width: 100%;
+                padding: 40px 0;
+                border-bottom: 1px solid var(--longBorder);
+                .box{
+                    margin: 5px;
+                    width: 150px;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid var(--textColor1);
+                    p{
+                        margin-bottom: 0;
+                        color: var(--textColor1);
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-part{
+        margin-top: 10px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid var(--smallBorderAndTxt);
+        .details-tab{
+            font-size: 15px;
+            nav{
+                button{
+                    border: none;
+                    color: var(--theBlackColor);
+                    font-weight: 500;
+                    padding:20px 10px;
+                }
+                .active{
+                    background-color: var(--light-overlay);
+                    color: var(--tabActiveColor);
+                    border-bottom: 2px solid var(--tabActiveColor);
+                }
+            }
+            .tab-content{
+                margin-top: 15px;
+                p{
+                    color: var(--tabTxtColor);
+                    font-weight: 400;
+                }
+                .about-list{
+                    .line{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        dt{
+                            font-weight: 500;
+                            color: var(--tabBoldColor);
+                        }
+                        dd{
+                            color: var(--textColor1);
+                        }
+                    }
+                }
+            }
+        }
+        .details-table{
+            border-radius: 8px;
+            border: 1px solid var(--smallBorderAndTxt);
+            .offer-line{
+                display: flex;
+                padding: 15px 20px;
+                border-bottom: 1px solid var(--smallBorderAndTxt);
+                .icon{
+                    margin-right: 12px;
+                    i{
+                        font-size: 18px;
+                        color: var(--inActiveTabTxtColor);
+                    }
+                }
+            }
+            .offer-list{
+                min-height: 176px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .icon{
+                    font-size: 30px;
+                    color: var(--textColor1);
+                }
+                .no-offer{
+                    h6{
+                        font-size: 17px;
+                        color: var(--textColor1);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .footer-table{
+        margin-top: 40px;
+        border: 1px solid var(--smallBorderAndTxt);
+        border-radius: 8px;
+        color:var(--theBlackColor);
+        .table-bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--smallBorderAndTxt);
+            padding: 12px 25px;
+            .left-side{
+                display: flex;
+                align-items: center;
+                .icon{
+                    margin-right: 10px;
+                }
+                .text{
+                    span{
+                        font-weight: 500;
+                        color: var(--tabBoldColor);
+                    }
+                }
+            }
+            .right-side{
+                display: flex;
+                button{
+                    margin-left: 20px;
+                    border: none;
+                    padding: 2px 10px;
+                    color: var(--whiteColor);
+                    font-weight: 400;
+                    background: var(--tabActiveColor);
+                    border-radius: 7px;
+                    margin: 3px;
+                    i{
+                        margin-right: 5px;
+                        font-size: 14px;
+                    }
+                }
+                .active{
+                    background: var(--whiteColor);
+                    border: 1px solid var(--smallBorderAndTxt);
+                    color: var(--textColor1);
+                }
+                .refresh{
+                    padding: 5px 25px;
+                }
+            }
+        }
+        .theTable{
+            height: 350px;
+            overflow: scroll;
+            table{
+                width: 100%;
+                th{
+                    font-weight: 400;
+                    color: var(--textColor1);
+                }
+                th, td{
+                    padding: 12px 18px;
+                    border-bottom: 1px solid var(--smallBorderAndTxt);
+                    .event{
+                        display: flex;
+                        align-items: center;
+                        i{
+                            margin-right: 15px;
+                        }
+                    }
+                    .img-box{
+                        display: flex;
+                        img{
+                            width: 50px;
+                            margin-right: 5px;
+                            border-radius: 6px;
+                            .name{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+// getComputedStyle(document.querySelector('.text-sm')).getPropertyValue('font-size')

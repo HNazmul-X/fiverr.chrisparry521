@@ -1,5 +1,5 @@
 import { InlineIcon } from "@iconify/react";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -7,22 +7,30 @@ const Navbar = () => {
     const [isMblSearchbarShow, setIsMblSearchbarShow] = useState(false);
     const [isDarkMode , setIsDarkMode] = useState(false)
 
-    useEffect(() => {
-        if (isDropdownShow) {
-            window.addEventListener("click", (e) => {
-                e.preventDefault();
-                setIsDropdownShow(false);
-            });
+    useEffect(()=> {
+        const theme = localStorage.getItem("theme")
+        if(theme==="dark"){
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark")
         }
-    });
+    },[isDarkMode])
+   
 
     const switchingTheme = () => {
-        if(isDarkMode){
-            document.body.classList.remove("dark")
-        } else if(!isDarkMode){
-            document.body.classList.add("dark")
+        const theme = localStorage.getItem("theme")
+        
+        if(theme==="dark"){
+            localStorage.setItem("theme","light")
+            setIsDarkMode(true)
+        }else{
+            localStorage.setItem("theme","dark")
+            setIsDarkMode(false)
         }
-        setIsDarkMode(!isDarkMode)
+
+
+
+
     }
 
 
@@ -50,7 +58,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li onClick={switchingTheme}>
-                            <Link to="/">{!isDarkMode ? <InlineIcon icon="bytesize:moon" style={{ fontSize: "25px" }} /> : <InlineIcon style={{ fontSize: "25px" }} icon="cil:sun" />}</Link>
+                            <div>{!isDarkMode ? <InlineIcon icon="bytesize:moon" style={{ fontSize: "25px" }} /> : <InlineIcon style={{ fontSize: "25px" }} icon="cil:sun" />}</div>
                         </li>
                         <li className="d-none d-md-block">
                             <Link to="/">FAQ</Link>

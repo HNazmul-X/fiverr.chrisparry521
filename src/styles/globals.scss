@@ -1,30 +1,88 @@
 @import "home";
 @import "components";
+#page2 {
+    --theBlackCXolor: #000;
+    --border: rgb(209, 213, 219);
+    --borderandbtn: rgb(107, 114, 128);
+    --whiteBoxBorder: rgb(243, 244, 246);
+    --messageNumber: rgb(99, 102, 241);
+    --littleDescColor: rgb(17, 24, 39);
+    --searchBarBackground: #f3f4f6;
+    --searchbarIconColors: rgb(116, 122, 135);
+    --filterBorder: rgb(229, 231, 235);
+    --acordionButtonColor: rgb(75, 85, 99);
+    --pictureBoxColor: rgb(55, 65, 81);
+    @import "page2";
+}
+body.dark {
+    #page2 {
+        --theBlackCXolor: rgb(194, 194, 194);
+        --border: rgb(193, 203, 218);
+        --borderandbtn: rgb(181, 192, 207);
+        --whiteBoxBorder: rgb(28, 35, 46);
+        --messageNumber: rgb(134, 136, 230);
+        --littleDescColor: rgb(129, 129, 129);
+        --searchBarBackground: rgb(41, 47, 53);
+        --searchbarIconColors: rgb(116, 122, 135);
+        --filterBorder: rgb(71, 71, 71);
+        --acordionButtonColor: rgb(195, 209, 230);
+        --pictureBoxColor: rgb(167, 178, 197);
+    }
+}
+#page3 {
+    --whiteColor: #fff;
+    --textColor1: rgb(107, 114, 128);
+    --offerBtnBg: rgb(238, 242, 255);
+    --tableActiveBtn: rgb(67, 56, 202);
+    --theBlackColor: #000;
+    --longBorder: rgb(229, 231, 235);
+    --smallBorderAndTxt: rgb(209, 213, 219);
+    --tabActiveColor: rgb(79, 70, 229);
+    --tabTxtColor: rgb(31, 41, 55);
+    --tabBoldColor: rgb(17, 24, 39);
+    --inActiveTabTxtColor: rgb(51, 51, 51);
+    @import "page3";
+}
+body.dark {
+    #page3 {
+        --whiteColor: rgb(22, 22, 22);
+        --textColor1: rgb(214, 215, 218);
+        --offerBtnBg: rgb(219, 221, 255);
+        --tableActiveBtn: rgb(53, 48, 48);
+        --theBlackColor: rgb(218, 219, 226);
+        --longBorder: rgb(155, 155, 155);
+        --smallBorderAndTxt: rgb(71, 71, 71);
+        --tabActiveColor: rgb(120, 115, 218);
+        --tabTxtColor: rgb(226, 226, 226);
+        --tabBoldColor: rgb(196, 203, 216);
+        --inActiveTabTxtColor: rgb(218, 218, 218);
+    }
+}
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
     font-family: "Inter", sans-serif !important;
     box-sizing: border-box;
 }
-:root{
+:root {
     --light-color: white;
     --dark-color: #111827;
-    --dark-light-color: rgba(107, 114, 128, 1);
-    --light-overlay:rgb(211, 211, 211);
+    --dark-light-color: rgb(148, 152, 161);
+    --light-overlay: rgb(211, 211, 211);
     --black: black;
 }
-body.dark{
+body.dark {
     background: #15191f;
-    --light-color:#15191f;
-    --black:rgb(198, 207, 216);
-    --dark-color:rgb(207, 210, 224);
-    --dark-light-color:rgb(133, 133, 133);
-    --light-overlay:rgb(78, 83, 88);
+    --light-color: #15191f;
+    --black: rgb(198, 207, 216);
+    --dark-color: rgb(207, 210, 224);
+    --dark-light-color: rgb(133, 133, 133);
+    --light-overlay: rgb(34, 38, 43);
 }
-.MuiTypography-root{
-    color:var(--dark-color)!important;
+.MuiTypography-root {
+    color: var(--dark-color) !important;
 }
-.text-dark{
-    color:var(--dark-color) !important;
+.text-dark {
+    color: var(--dark-color) !important;
 }
 
 .container-xxl {
