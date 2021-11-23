@@ -1128,4 +1128,41 @@ body.dark {
 .theme-btn:hover {
   background: #576177 !important;
 }
+
+#Faq .faq-container {
+  max-width: 650px;
+  margin: auto;
+}
+
+#Faq .faq-container .faq-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+#Faq .faq-container .faq-card .faq-card__image {
+  padding: 1.4rem 0px;
+}
+
+#Faq .faq-container .faq-card .faq-card__image img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 15px;
+}
+
+#Faq .faq-container .faq-card .faq-card__text {
+  color: var(--dark-color);
+  padding: 1.5rem 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+#Faq .faq-container .faq-card .faq-card__text .desc {
+  opacity: 0.8;
+}
 /*# sourceMappingURL=globals.css.map */

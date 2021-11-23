@@ -2,6 +2,7 @@ import { InlineIcon } from '@iconify/react';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import IMG from "../../images/512.webp"
 
 const AllCollection = () => {
@@ -27,9 +28,13 @@ export default AllCollection;
 
 
 export const AllCollectionCard = () => {
-
+    const navigate = useNavigate()
+    
     return (
-        <Card elevation={0} sx={{ width: "100%", background: "transparent" }}>
+        <Card onClick={()=> {
+            navigate("/page2");
+            window.scroll({top:0})
+        } } elevation={0} sx={{ width: "100%", background: "transparent" }}>
             <CardActionArea>
                 <CardMedia height={"286px"} sx={{ borderRadius: 3 }} image={IMG} component="img"></CardMedia>
                 <CardContent style={{ padding: 5 }}>

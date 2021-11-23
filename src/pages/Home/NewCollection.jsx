@@ -2,6 +2,7 @@ import { Card, CardActionArea, CardMedia, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import IMG from "../../images/512.webp"
+import {useNavigate} from "react-router-dom"
 
 const NewCollection = () => {
     return (
@@ -26,12 +27,21 @@ const NewCollection = () => {
 export default NewCollection;
 
 export const NewCollectionCard = () => {
+    const navigate = useNavigate()
     return (
-        <Box display="inline-block" mx={2}>
-            <Card elevation={0} style={{background:"transparent",width:"256px"}} >
+        <Box
+            onClick={() => {
+                navigate("/page2");
+                window.scroll({ top: 0 });
+            }}
+            display="inline-block"
+            mx={2}>
+            <Card elevation={0} style={{ background: "transparent", width: "256px" }}>
                 <CardActionArea>
-                    <CardMedia component="img" image={IMG} height="256px" sx={{borderRadius:"5px"}} />
-                    <Typography marginTop={2} align="center" variant="h5">Scogies</Typography>
+                    <CardMedia component="img" image={IMG} height="256px" sx={{ borderRadius: "5px" }} />
+                    <Typography marginTop={2} align="center" variant="h5">
+                        Scogies
+                    </Typography>
                     <Typography align="center"> 6969 items</Typography>
                 </CardActionArea>
             </Card>

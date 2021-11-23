@@ -1,0 +1,29 @@
+.faq-container {
+    max-width: 650px;
+    margin: auto;
+
+    .faq-card {
+        display: flex;
+        padding: 10px;
+        .faq-card__image {
+            padding: 1.4rem 0px;
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+                flex-shrink: 0;
+                margin-right: 15px;
+            }
+        }
+        .faq-card__text {
+            color: var(--dark-color);
+            padding: 1.5rem 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+
+            .desc{
+                opacity: 0.8;
+            }
+        }
+    }
+}

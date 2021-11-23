@@ -1,11 +1,12 @@
 import { InlineIcon } from "@iconify/react";
 import React, {useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [isDropdownShow, setIsDropdownShow] = useState(false);
     const [isMblSearchbarShow, setIsMblSearchbarShow] = useState(false);
     const [isDarkMode , setIsDarkMode] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(()=> {
         const theme = localStorage.getItem("theme")
@@ -29,10 +30,6 @@ const Navbar = () => {
             localStorage.setItem("theme","light")
             setIsDarkMode(false)
         }
-
-
-
-
     }
 
 
@@ -40,7 +37,7 @@ const Navbar = () => {
         <nav id="navbar">
             <div className="container-fluid">
                 <div className="navbar-item-container">
-                    <div className="navbar-brand">Logo</div>
+                    <div onClick={()=> navigate("/") } style={{cursor:"pointer"}} className="navbar-brand">Logo</div>
                     <div className={`${isMblSearchbarShow ? "active" : ""} navbar-searchBar`}>
                         <div className="search-bar">
                             <span className="search-bar__icon">
@@ -63,7 +60,7 @@ const Navbar = () => {
                             <div>{!isDarkMode ? <InlineIcon icon="bytesize:moon" style={{ fontSize: "25px" }} /> : <InlineIcon style={{ fontSize: "25px" }} icon="cil:sun" />}</div>
                         </li>
                         <li className="d-none d-md-block">
-                            <Link to="/">FAQ</Link>
+                            <Link to="/faq">FAQ</Link>
                         </li>
                         <li>
                             <div style={{ fontWeight: 500, cursor: "pointer" }}>

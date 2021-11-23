@@ -8,7 +8,9 @@ const Header = () => {
                 <div className="header-text">
                     <h1>A-Class Trading With Alpha Art</h1>
                     <p>Alpha art is the revolutionary NFT marketplace currently allowing users to buy/sell Solana based NFTs without any listing fees.</p>
-                    <button className="theme-btn rounded px-5 mt-3">Explore Collection</button>
+                    <button onClick={() => (window.location.href = "/#all-collection")} className="theme-btn rounded px-5 mt-3">
+                        Explore Collection
+                    </button>
                 </div>
             </div>
 

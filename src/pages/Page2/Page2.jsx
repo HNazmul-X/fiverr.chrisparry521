@@ -3,8 +3,13 @@ import header_img from "../../images/page-2-header.jpg"
 import mock_image from "../../images/196.webp"
 import SitebarCollpase from '../../components/SitebarCollpase/SitebarCollpase';
 import { InlineIcon } from '@iconify/react';
+import {useNavigate} from "react-router-dom"
 
 const Page2 = () => {
+
+    const navigate = useNavigate()
+
+
     return (
         <div id="page2">
             <section className="dape-header">
@@ -97,7 +102,10 @@ const Page2 = () => {
                             </div>
                             <div className="image-container">
                                 {[...new Array(40)].map((c, i) => (
-                                    <div key={i} className="image-box">
+                                    <div onClick={()=>{
+                                        navigate("/page3", { replace: true });
+                                        window.scroll({ top: 0 });
+                                    }} key={i} className="image-box">
                                         <div className="img">
                                             <img src={mock_image} alt="" />
                                         </div>
